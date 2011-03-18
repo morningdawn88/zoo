@@ -1,0 +1,28 @@
+<table border="1">
+  <% @suggestions.each do |ab| %>
+    <tr>
+      <td><%= ab.first_name %></td>
+      <td><%= ab.last_name %></td>
+      <td><%= ab.username %></td>
+      <td><%= ab.division %></td>
+      <td><%= ab.department %></td>
+      <td><%= ab.memo %></td>
+      <td><%= ab.created_at %></td>
+      <td><%= ab.updated_at %></td>
+    </tr>
+  <% end %>
+
+</table>
+<% if cookies.signed[:user_id] == 1 %>
+   <%= link_to "Add suggestion", :controller =>
+   "suggestions", :action => "new" %>
+   <%= link_to "Edit suggestion", :controller => "suggestions",
+   :action => "chooseSuggestion" %>
+<% end %>
+<%= link_to "Login", :controller => "pages", :action => "login" %></br></br>
+<%= link_to "Created Date", :controller => "suggestions", :action => "index_by_created" %></br>
+<%= link_to "Modification Date", :controller => "suggestions", :action => "index_by_modified" %></br>
+<%= link_to "Department", :controller => "suggestions", :action => "index_by_department" %></br>
+<%= link_to "Division", :controller => "suggestions", :action => "index_by_division" %></br>
+<%= link_to "Last Name", :controller => "suggestions", :action => "index_by_last_name" %></br>
+

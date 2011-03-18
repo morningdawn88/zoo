@@ -1,0 +1,16 @@
+<h1>Pages#login</h1>
+<p>Find me in app/views/pages/login.html.erb</p>
+<!-- app/views/pages/login.html.erb -->
+<%= form_for :user, :url => { :action => "login" } do |f| %>
+<%= f.label "Username: " %>
+<%= f.text_field :username %><br />
+<%= f.label "Password: " %>
+<%= f.password_field :password %><br />
+<%= f.submit "Submit" %>
+<% end %>
+
+Use "Guest login" to view the suggestions.</br>
+Username: guest</br>
+Password: guest</br>
+
+

@@ -1,0 +1,8 @@
+<!-- app/views/suggestions/edit.html.erb -->
+<%= form_for @suggestions, :url => { :action => "update" } do |f| %>
+  <%= f.label "Suggestion: " %>
+  <%= f.text_field :memo %><br />
+  <%= f.hidden_field :sid %>
+  <%= f.submit "Submit" %>
+<% end %>
+

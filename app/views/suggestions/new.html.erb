@@ -1,0 +1,8 @@
+<!-- app/views/suggestions/new.html.erb -->
+<h2>New Suggestion</h2>
+<%= form_for :suggestion, :url => { :action => "create" } do |f| %>
+<%= f.label "Suggestion Entry: " %>
+<%= f.text_field :memo %><br />
+<%= f.submit "Submit" %>
+<% end %>
+
